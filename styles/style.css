@@ -246,12 +246,13 @@
     font-size: 18px;
 }
 
-.header__address {
+.footer__address {
     justify-self: start;
 }
 
 .footer__links-list {
     justify-self: center;
+    list-style-type: none;
 }
 
 .footer__social-list {
@@ -261,9 +262,6 @@
     list-style-type: none;
 }
 
-.footer__links-list {
-    list-style-type: none;
-}
 
 .header__link_active {
     text-decoration: none;
