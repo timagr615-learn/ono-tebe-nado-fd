@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     width: 100%;
-    padding: 92px 50px 96px 50px;
+    padding: 92px 50px 90px 50px;
     align-items: center;
     font-size: 18px;
 }
@@ -13,7 +13,7 @@
 
 .header__links-list {
     display: flex;
-    gap: 28px;
+    gap: 33px;
     width: 392px;
     list-style-type: circle;
 }
@@ -32,7 +32,7 @@
     height: 105px;
 }
 
-.header__address {
+.address {
     justify-self: end;
     display: flex;
     flex-direction: column;
@@ -46,27 +46,27 @@
     background: url("../images/cover.jpg") no-repeat center / cover;
     position: relative;
     color: white;
-    margin-bottom: 180px;
+    margin-bottom: 182px;
 }
 
 .overlay {
     position: absolute;
     inset: 0;
-    background-color: rgb(0 0 0 / 0.5);
-    z-index: 0;
-
+    background-color: rgb(0 0 0 / 0.6);
 }
 
 .cover__title {
+    position: relative;
+    z-index: 1;
     text-transform: uppercase;
     margin-bottom: 106px;
-    line-height: 115px;
+    line-height: 114px;
     font-weight: bold;
-    padding: 165px 50px 0 50px;
+    padding: 170px 50px 0 50px;
 }
 
 .letter-spacing-extended {
-    letter-spacing: 1.3em;
+    letter-spacing: 1.25em;
 }
 
 .aligned-text {
@@ -85,25 +85,27 @@
 
 .aligned-text_center {
     text-align: center;
+    margin-left: 30px;
 }
 
 .no-letter-spacing {
-    margin-right: -0.2em;
+    letter-spacing: normal;
 }
 
 .cover__description {
     display: flex;
+    position: relative;
+    z-index: 1;
     justify-content: space-between;
     line-height: 28px;
     font-size: 22px;
     text-transform: uppercase;
-    height: 51px;
     padding: 0 50px;
 }
 
 .cover__description-text {
     align-self: center;
-    word-spacing: 20px;
+    word-spacing: 19px;
 }
 
 .bet-button {
@@ -117,7 +119,7 @@
 
 .lots {
     width: 1052px;
-    margin: 0 auto 120px auto;
+    margin: 0 auto 125px auto;
 }
 
 .lots__heading {
@@ -129,6 +131,7 @@
 
 .lots__card-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 25px;
     width: 100%;
@@ -137,13 +140,18 @@
     margin-bottom: 30px;
 }
 .lots__card-list-item {
-    height: 596px;
-    min-width: 334px;
+    min-height: 596px;
+    max-width: 334px;
     position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .card-link {
     display: flex;
+    position: relative;
+    z-index: 1;
     flex-direction: column;
     height: 100%;
     text-decoration: none;
@@ -170,26 +178,26 @@
 }
 
 .card_type_film {
-    background: url("../images/card-lot-01.jpg") no-repeat center / cover;
+    background-image: url("../images/card-lot-01.jpg");
 }
 
 .card_type_book {
-    background: url("../images/card-lot-02.jpg") no-repeat center / cover;
+    background-image: url("../images/card-lot-02.jpg");
 }
 
 .card_type_picture {
-    background: url("../images/card-lot-03.jpg") no-repeat center / cover;
+    background-image: url("../images/card-lot-03.jpg");
 }
 
 .lots__look-more-link {
     font-size: 20px;
-    padding-left: 40px;
+    margin-left: 40px;
 }
 
 
 
 .about {
-    margin: 0 24px 180px 24px;
+    margin: 0 24px 185px 24px;
     display: grid;
     grid-template-columns: 334px auto;
     grid-template-rows: repeat(2, auto);
@@ -200,20 +208,23 @@
 
 .about__logo_section {
     grid-area: about_logo;
-    padding-top: 35px;
+    padding-top: 30px;
     padding-left: 47px;
 }
 
 .about__title_section {
     grid-area: about_title;
     align-self: center;
-    padding-top: 35px;
+    padding-top: 40px;
+    padding-left: 25px;
     font-size: 40px;
     text-transform: uppercase;
 }
 
 .about__text_section {
     grid-area: about_text;
+    padding-left: 25px;
+    padding-top: 10px;
 }
 
 .about__logo {
@@ -242,7 +253,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     padding-left: 50px;
     padding-right: 50px;
-    height: 180px;
     font-size: 18px;
 }
 
@@ -250,9 +260,16 @@
     justify-self: start;
 }
 
-.footer__links-list {
+.footer__links {
     justify-self: center;
+}
+
+.footer__links-list {
     list-style-type: none;
+}
+
+.footer__links-list-item {
+    text-align: center;
 }
 
 .footer__social-list {
